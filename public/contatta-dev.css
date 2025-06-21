@@ -1,0 +1,331 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar-devstrano {
+ display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1440px;
+    height: 80px;
+    position: relative;
+}
+
+.logo-devstrano {
+    width: 160px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo-devstrano img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links-devstrano {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.nav-links-devstrano a {
+    color: #222;
+    font-weight: 500;
+    font-size: 1.rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+.nav-links-devstrano .login-btn {
+    padding: 12px 28px;
+    font-size: 1.15rem;
+    border-radius: 10px;
+    background: #8ff57a;
+    color: #fff;
+    font-weight: 500;
+    border: 2px solid #8ff57a;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    margin-left: 12px;
+    box-shadow: 0 2px 8px rgba(110,227,107,0.10);
+}
+
+.nav-links-devstrano .login-btn:hover {
+    background: #6ee36b;
+    color: #222;
+    border-color: #6ee36b;
+}
+
+
+.login-btn {
+    background: #fff;
+    color: #222;
+    border: 2px solid #8ff57a;
+    border-radius: 12px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+.dev-contact-strip-strano {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0 32px 0;
+}
+
+.dev-contact-content-strano {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 48px 38px 38px 38px;
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.dev-title-strano {
+    text-align: center;
+    width: 100%;
+    color: #222;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+.dev-contact-subtitle-strano {
+    color: #222;
+    font-size: 1.13rem;
+    margin-bottom: 22px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+#dev-contact-form-strano {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group-strano {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.form-group-strano label {
+    font-weight: 600;
+    color: #222;
+    font-size: 1.08rem;
+    margin-bottom: 2px;
+}
+
+.form-group-strano input,
+.form-group-strano textarea,
+.form-group-strano select {
+    padding: 15px;
+    border-radius: 9px;
+    border: 1.5px solid #3ed598;
+    font-size: 1.08rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fafafa;
+    margin: 0;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.2s;
+}
+
+.form-group-strano input:focus,
+.form-group-strano textarea:focus,
+.form-group-strano select:focus {
+    border-color: #1d4eda;
+    outline: none;
+}
+
+.form-group-strano textarea {
+    resize: none;
+    min-height: 120px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.08rem;
+}
+
+.send-btn-strano {
+    background-color: #8ff57a;
+    color: #fff;
+    padding: 16px 0;
+    border-radius: 13px;
+    font-weight: 600;
+    font-size: 1.13rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 12px;
+    width: 100%;
+    display: block;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(62,213,152,0.07);
+}
+.send-btn-strano:hover {
+    background: #6ee36b;
+}
+
+#dev-form-message-strano {
+    margin-top: 26px;
+    margin-bottom: 6px;
+    font-size: 1.12rem;
+    color: #1d4eda;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+.site-footer-strano {
+    margin-top: auto;
+    background: #222;
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+    width: 100%;
+    border-radius: 0;
+    position: static;
+    font-size: 1rem;
+    left: unset;
+    right: unset;
+    transform: none;
+    box-sizing: border-box;
+}
+.footer-content-strano a {
+    color: #8ff57a;
+    text-decoration: underline;
+}
+#dev-form-message-strano {
+    transition: opacity 0.6s;
+    opacity: 1;
+}
+#dev-form-message-strano.fade-out {
+    opacity: 0;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .navbar-devstrano {
+        padding: 18px 10vw;
+        gap: 18px;
+    }
+    .dev-contact-content-strano {
+        max-width: 98vw;
+        padding: 24px 2vw;
+    }
+}
+@media (max-width: 600px) {
+    .navbar-devstrano {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 2vw;
+        gap: 12px;
+        height: auto;
+    }
+    .logo-devstrano {
+        width: 120px;
+        height: 44px;
+    }
+    .dev-contact-content-strano {
+        padding: 12px 2vw;
+    }
+    .dev-title-strano {
+        font-size: 1.3rem;
+    }
+
+
+   
+}
+
+@media (max-width: 600px) {
+    .navbar-devstrano {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px 2vw 10px 2vw;
+        gap: 10px;
+        height: auto;
+    }
+    .logo-devstrano {
+        width: 120px;
+        height: 44px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    .nav-links-devstrano {
+        flex-direction: row;
+        gap: 18px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .dev-title-strano {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+    .dev-contact-subtitle-strano {
+        font-size: 1.18rem;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+    .dev-contact-content-strano,
+    .form-group-strano label,
+    .form-group-strano input,
+    .form-group-strano textarea,
+    .form-group-strano select,
+    .send-btn-strano {
+        font-size: 1rem;
+    }
+}

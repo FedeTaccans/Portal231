@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrati</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <a href="index.html" class="login-logo">
+        <img src="LOGO231.webp" alt="logo" />
+    </a>
+    <section class="login-strip">
+        <div class="login-content">
+            <h2>Registrati</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="reg_name">Nome</label>
+                    <input type="text" id="reg_name" name="reg_name" placeholder="Il tuo nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg_email">Email</label>
+                    <input type="email" id="reg_email" name="reg_email" placeholder="La tua email" required>
+                </div>
+                <div class="form-group" style="position:relative;">
+    <label for="reg_password">Password</label>
+    <input type="password" id="reg_password" name="reg_password" placeholder="Password" required>
+    <span class="toggle-password" toggle="#reg_password">
+        <i class="ri-eye-off-line"></i>
+    </span>
+</div>
+                <button type="submit" class="send-btn">Registrati</button>
+            </form>
+            <div id="register-message"></div>
+            <p class="register-link">
+                Hai già un account?
+                <a href="login.html">Accedi</a>
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyBgJTNvZ3px6oSHu7CTUNzsBsZjx0r0IWY",
+    authDomain: "accedi-231.firebaseapp.com",
+    projectId: "accedi-231",
+    storageBucket: "accedi-231.firebasestorage.app",
+    messagingSenderId: "62105917789",
+    appId: "1:62105917789:web:b9d421d68178b5dbbcb0b4",
+    measurementId: "G-L9DJ0FQLV2"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <script src="register.js"></script>
+</body>
+</html>

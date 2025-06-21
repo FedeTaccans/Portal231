@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Documenti | Portale 231</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #f8f8f8;
+        }
+
+        .shop-container {
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            padding: 0 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+
+        .doc-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+            border: 1px solid #e0e0e0;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .doc-card:hover {
+            box-shadow: 0 8px 24px rgba(62, 213, 152, 0.18);
+            transform: translateY(-4px) scale(1.03);
+        }
+
+        .doc-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .doc-card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 18px 0 16px 0;
+            text-align: center;
+            color: #222;
+            padding: 0 10px;
+        }
+
+        @media (max-width: 700px) {
+            .shop-container {
+                gap: 18px;
+            }
+
+            .doc-card {
+                width: 96vw;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" class="logo">
+                <img src="LOGO231.webp" alt="logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#chi-sono">Chi Sono</a>
+            <a href="index.html#contattami">Contattami</a>
+
+        </div>
+        <div class="navbar-actions">
+            <div class="search-box" style="display:inline-flex;align-items:center;gap:4px;margin-right:18px;">
+                <i class="ri-search-line" style="font-size:1.5rem;color:#3ed598;"></i>
+                <input type="text" id="search-input" placeholder="Cerca documenti..."
+                    style="padding:6px 10px;border-radius:8px;border:1px solid #e0e0e0;font-size:1rem;">
+            </div>
+            <a class="login-btn" href="login.html" id="login-btn">
+                <i class="ri-login-box-line"></i>
+                Accedi
+            </a>
+        </div>
+    </nav>
+    <main>
+        <h2 style="text-align:center;margin:40px 0 24px 0;color:#3ed598;font-size:2.2rem;">Documenti in vendita</h2>
+        <div class="shop-container">
+            <!-- Esempio di card documento -->
+            <a href="documento1.html" class="doc-card">
+                <img src="pdf.logo.jpg" alt="Documento 1">
+                <div class="doc-card-title">Modello Organizzativo 231 Base</div>
+            </a>
+            <a href="documento2.html" class="doc-card">
+                <img src="xcel.logo.jfif" alt="Documento 2">
+                <div class="doc-card-title">Codice Etico Aziendale</div>
+            </a>
+            <a href="documento3.html" class="doc-card">
+                <img src="word.logo.png" alt="Documento 3">
+                <div class="doc-card-title">Regolamento Disciplinare</div>
+            </a>
+            <!-- Aggiungi altre card qui -->
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2025 Portale 231. Tutti i diritti riservati. Sito realizzato da <a
+                    href="contatta-dev.html">Federico Taccani</a></span>
+            <span class="footer-links">
+
+                <a href="https://www.linkedin.com/in/ennio-battistoli-1844992b" target="_blank">LinkedIn</a>
+            </span>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('search-input').addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            document.querySelectorAll('.doc-card').forEach(card => {
+                const title = card.querySelector('.doc-card-title').textContent.toLowerCase();
+                card.style.display = title.includes(query) ? '' : 'none';
+            });
+        });
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBgJTNvZ3px6oSHu7CTUNzsBsZjx0r0IWY",
+            authDomain: "accedi-231.firebaseapp.com",
+            projectId: "accedi-231",
+            storageBucket: "accedi-231.firebasestorage.app",
+            messagingSenderId: "62105917789",
+            appId: "1:62105917789:web:b9d421d68178b5dbbcb0b4",
+            measurementId: "G-L9DJ0FQLV2"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            const loginBtn = document.getElementById('login-btn');
+            if (loginBtn) {
+                if (user) {
+                    loginBtn.style.display = "none";
+                } else {
+                    loginBtn.style.display = "";
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

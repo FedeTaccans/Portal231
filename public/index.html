@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="https://231landia.it/" target="_blank" class="logo">
+                <img src="LOGO231.webp" alt="logo" loading="lazy">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#chi-sono">Chi Sono</a>
+            <a href="#contattami">Contattami</a>
+        </div>
+        <div class="navbar-actions">
+            <a class="login-btn" href="login.html" id="login-btn">
+                <i class="ri-login-box-line"></i>
+                Accedi
+            </a>
+            <div class="profile-dropdown">
+                <a href="#" class="profile" id="profile-icon">
+                    <i class="ri-account-circle-line"></i>
+                </a>
+                <div class="dropdown-menu" id="profile-menu">
+                    <a href="profilo.html">Profilo</a>
+                    <a href="ordini.html">I miei ordini</a>
+                    <a href="impostazioni.html">Impostazioni</a>
+                    <a href="#" id="logout-btn">Logout / Esci</a>
+                </div>
+            </div>
+            <a class="buy-now" href="shop-documenti.html">
+                <span>Compra Ora</span>
+                <i class="ri-shopping-cart-2-fill"></i>
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div class="left">
+            <div class="content">
+
+                <h3>Usufruisci della Nostra Conoscenza</h3>
+                <div class="header-actions">
+                    <h1>PORTALE <span>231</span></h1>
+                </div>
+                <p>Se intendi fare il primo movimento “pratico / operativo”
+                    dobbiamo iniziare il dialogo e comunicare. Niente di impegnativo ma
+                    entrambi abbiamo bisogno di fare la reciproca conoscenza che potrà terminare
+                    immediatamente, senza ulteriore impegno oppure proseguirà. A questo punto è
+                    necessario, se non hai il Modello “231”, mettere insieme e condividere pochi
+                    dati essenziali come indicato in un paio di documenti
+                    preliminari che ti vengono forniti e che dovrai compilare.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="right">
+            <img class="header-img" src="header-image.jfif" alt="immagine-header-loghi-file" loading="lazy">
+        </div>
+    </header>
+
+    <section id="chi-sono" class="chi-sono-strip">
+        <div class="chi-sono-content chi-sono-content-vertical">
+            <h2>CHI SONO</h2>
+            <img src="ennio-bat.jfif" alt="enniobat" class="chi-sono-img" loading="lazy">
+        </div>
+    </section>
+    <div class="chi-sono-extra">
+        <p>Mi chiamo Battistoli Ennio, nato e cresciuto a Milano.
+
+            Dopo 21 anni di intensa attività nel campo della Responsabilità Amministrativa (D.lgs 231/2001), ho deciso
+            di avviare un progetto per condividere l'esperienza maturata con colleghi e collaboratori.
+
+            Sono entrato nella "231" fin dall'inizio, quando ho trasformato il mio status da dipendente a consulente /
+            counselor. In precedenza, ho ricoperto il ruolo di Responsabile dell'Internal Audit in multinazionali
+            operanti nei settori agroalimentare, dietetico, chimico/farmaceutico ed elettromeccanico, con sedi in USA,
+            UK e Svizzera.
+
+            Questa esperienza mi ha permesso di operare a livello nazionale e internazionale (Europa, Asia, Nord
+            America, Sud Africa), esponendomi a diverse "scuole" di auditing.
+
+            I miei 25 anni di auditing e i 20 di consulenza si traducono in una vasta mole di documentazione raccolta,
+            prodotta e analizzata. Questi documenti, se interpretati correttamente, rivelano il carattere e l'approccio
+            di una Società a temi come la "231", fondamentali per assicurare la continuità operativa nel proprio
+            settore.
+
+
+        </p>
+        <div class="chi-sono-social">
+            <a href="https://it.linkedin.com/in/ennio-battistoli-1844992b" target="_blank"><i
+                    class="ri-linkedin-box-fill"></i></a>
+            <a href="https://www.instagram.com/231landia/" target="_blank"><i class="ri-instagram-fill"></i></a>
+        </div>
+    </div>
+
+
+    <section id="contattami" class="contact-strip">
+        <div class="contact-content">
+            <h2>Contattami</h2>
+            <p class="contact-subtitle">Hai bisogno di aiuto? Non esitare a contattarmi</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="user_name">Nome</label>
+                    <input type="text" id="user_name" name="user_name" placeholder="Inserisci il tuo Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="user_email">Email</label>
+                    <input type="email" id="user_email" name="user_email" placeholder="Inserisci la tua Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Di cosa hai Bisogno?"
+                        required></textarea>
+                </div>
+                <button type="submit" class="send-btn">Invia</button>
+            </form>
+            <div id="form-message"></div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBgJTNvZ3px6oSHu7CTUNzsBsZjx0r0IWY",
+            authDomain: "accedi-231.firebaseapp.com",
+            projectId: "accedi-231",
+            storageBucket: "accedi-231.firebasestorage.app",
+            messagingSenderId: "62105917789",
+            appId: "1:62105917789:web:b9d421d68178b5dbbcb0b4",
+            measurementId: "G-L9DJ0FQLV2"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2025 Portale 231. Tutti i diritti riservati. Sito realizzato da
+                <a href="contatta-dev.html">Federico
+                    Taccani.</a></span>
+            <span class="footer-links">
+
+                <a href="https://www.linkedin.com/in/ennio-battistoli-1844992b" target="_blank">LinkedIn</a>
+            </span>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+
+</body>
+
+</html>

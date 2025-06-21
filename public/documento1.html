@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modello Organizzativo 231 Base</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        .doc-detail-container {
+            max-width: 500px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+            border: 1px solid #e0e0e0;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .doc-detail-img {
+            width: 100%;
+            max-width: 320px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .doc-detail-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #3ed598;
+            text-align: center;
+        }
+
+        .doc-detail-desc {
+            font-size: 1.08rem;
+            color: #222;
+            text-align: center;
+        }
+
+        .doc-detail-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1d4eda;
+            margin: 12px 0;
+        }
+
+        .buy-now {
+            background-color: #8ff57a;
+            color: #fff;
+            padding: 15px 32px;
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .buy-now:hover {
+            background-color: #3ed598;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="LOGO231.webp" alt="logo">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop-documenti.html" style="color:#3ed598;font-weight:700;">Shop</a>
+        </div>
+        <div class="navbar-actions">
+            <a class="login-btn" href="login.html" id="login-btn">
+                <i class="ri-login-box-line"></i>
+                Accedi
+            </a>
+        </div>
+    </nav>
+    <main>
+        <a href="shop-documenti.html" class="back-to-shop"
+            style="display:inline-flex;align-items:center;gap:6px;margin-bottom:18px;color:#3ed598;font-weight:800;text-decoration:none;padding-left:16px;">
+            <i class="ri-arrow-left-line"></i> Torna allo shop
+        </a>
+        <div class="doc-detail-container">
+            <img src="pdf.logo.jpg" alt="Modello Organizzativo 231 Base" class="doc-detail-img">
+            <div class="doc-detail-title">Modello Organizzativo 231 Base</div>
+            <div class="doc-detail-desc">
+                Documento base per la gestione della responsabilità amministrativa delle società secondo il D.Lgs.
+                231/2001. Include linee guida e struttura personalizzabile.
+            </div>
+            <div class="doc-detail-price">€ 50,00</div>
+
+            <a href="Frasi 231.docx" download class="buy-now">
+
+                <i class="ri-shopping-cart-2-fill"></i>
+                Compra ora
+
+            </a>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2025 Portale 231. Tutti i diritti riservati. Sito realizzato da <a
+                    href="contatta-dev.html">Federico Taccani</a></span>
+            <span class="footer-links">
+
+                <a href="https://www.linkedin.com/in/ennio-battistoli-1844992b" target="_blank">LinkedIn</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBgJTNvZ3px6oSHu7CTUNzsBsZjx0r0IWY",
+            authDomain: "accedi-231.firebaseapp.com",
+            projectId: "accedi-231",
+            storageBucket: "accedi-231.firebasestorage.app",
+            messagingSenderId: "62105917789",
+            appId: "1:62105917789:web:b9d421d68178b5dbbcb0b4",
+            measurementId: "G-L9DJ0FQLV2"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            const loginBtn = document.getElementById('login-btn');
+            if (loginBtn) {
+                if (user) {
+                    loginBtn.style.display = "none";
+                } else {
+                    loginBtn.style.display = "";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

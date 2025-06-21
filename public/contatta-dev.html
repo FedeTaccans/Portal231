@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatta il Web Developer</title>
+    <link rel="stylesheet" href="contatta-dev.css">
+</head>
+
+<body>
+    <nav class="navbar-devstrano">
+        <div class="logo-devstrano">
+            <a href="index.html" class="logo-devstrano">
+                <img src="LOGO231.webp" alt="logo">
+            </a>
+        </div>
+
+        <div class="nav-links-devstrano">
+            <a href="index.html">Home</a>
+
+            <a href="https://federico-taccanis-portfolio.netlify.app/" target="_blank" class="login-btn">Il mio
+                Portfolio</a>
+        </div>
+    </nav>
+
+    <section class="dev-contact-strip-strano">
+        <div class="dev-contact-content-strano">
+            <h2 class="dev-title-strano">Contatta il Web Developer</h2>
+            <p class="dev-contact-subtitle-strano">
+                Richiedi assistenza tecnica, una consulenza o una collaborazione.<br>
+                Controlla il mio Portfolio per
+                una maggiore visione delle mie competenze e dei servizi offerti.
+            </p>
+            <form id="dev-contact-form-strano">
+                <div class="form-group-strano">
+                    <label for="dev_fullname">Nome e Cognome</label>
+                    <input type="text" id="dev_fullname" name="user_name" placeholder="Il tuo nome completo" required>
+                </div>
+                <div class="form-group-strano">
+                    <label for="dev_email">Email</label>
+                    <input type="email" id="dev_email" name="user_email" placeholder="La tua email" required>
+                </div>
+                <div class="form-group-strano">
+                    <label for="dev_reason">Motivo del contatto</label>
+                    <select id="dev_reason" name="dev_reason" required>
+                        <option value="">Seleziona una categoria</option>
+                        <option value="assistenza">Assistenza tecnica</option>
+                        <option value="collaborazione">Collaborazione</option>
+                        <option value="preventivo">Richiesta preventivo</option>
+                        <option value="altro">Altro</option>
+                    </select>
+                </div>
+                <div class="form-group-strano">
+                    <label for="dev_message">Messaggio</label>
+                    <textarea id="dev_message" name="message" rows="5" placeholder="Scrivi il tuo messaggio..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="send-btn-strano">Invia</button>
+            </form>
+            <div id="dev-form-message-strano"></div>
+        </div>
+    </section>
+
+    <footer class="site-footer-strano">
+        <div class="footer-content-strano">
+            <span>&copy; 2025 Portale 231. Sviluppo web: Federico Taccani</span>
+        </div>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("JTUoYM8OyA2taYaBp");
+        })();
+
+        const devForm = document.getElementById('dev-contact-form-strano');
+        const devMessageDiv = document.getElementById('dev-form-message-strano');
+
+        if (devForm && devMessageDiv) {
+            devForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                emailjs.sendForm('service_gz5wkgp', 'template_kx5195d', this) // <-- usa il tuo service/template
+                    .then(function () {
+                        devMessageDiv.textContent = "Messaggio inviato! Ti risponderò al più presto.";
+                        devMessageDiv.style.display = "block";
+                        devMessageDiv.classList.remove('fade-out');
+                        setTimeout(() => {
+                            devMessageDiv.classList.add('fade-out');
+                        }, 2400);
+                        setTimeout(() => {
+                            devMessageDiv.textContent = "";
+                            devMessageDiv.style.display = "none";
+                            devMessageDiv.classList.remove('fade-out');
+                        }, 3000);
+                        devForm.reset();
+                    }, function (error) {
+                        devMessageDiv.textContent = "Errore nell'invio. Riprova più tardi.";
+                        devMessageDiv.style.display = "block";
+                        devMessageDiv.classList.remove('fade-out');
+                        setTimeout(() => {
+                            devMessageDiv.classList.add('fade-out');
+                        }, 2400);
+                        setTimeout(() => {
+                            devMessageDiv.textContent = "";
+                            devMessageDiv.style.display = "none";
+                            devMessageDiv.classList.remove('fade-out');
+                        }, 3000);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

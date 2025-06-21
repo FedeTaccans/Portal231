@@ -1,0 +1,1367 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1440px;
+    height: 80px;
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #000;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+.nav-links a:hover {
+    color: #6ee36b;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 60px;
+}
+
+.profile i {
+    font-size: 2.2rem;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+.profile i:hover {
+    color: #6ee36b;
+}
+.buy-now {
+    background-color: #8ff57a;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+    cursor : pointer;
+}
+.buy-now:hover {
+    background-color: #6ee36b;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.left, .right {
+    flex: 1 1 0;
+}
+.dropdown-menu.show {
+    display: block;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 20px;
+    position: relative;
+    min-height: 500px;
+    margin-bottom: 140px;
+}
+
+header .left {
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    height: 500px;
+    margin-top: 60px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 30px;
+}
+
+header .left .content {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header .left .content h1 {
+    font-size: 7rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 20px;
+}
+header .left .content h1 span {
+    color: #8ff57a;
+}
+header .left .content h3 {
+    font-size: 1.8rem;
+    color: #3ed598;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+.header-img {
+    max-width: 600px;   /* o la dimensione massima che vuoi */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Striscia verde per la sezione "Chi Sono" */
+.chi-sono-strip {
+    width: 100%;
+    background: #8ff57a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 30px 0;
+    margin: 60px 0 0 0;
+    position: relative;
+    left: unset;
+    right: unset;
+    transform: none;
+}
+
+.chi-sono-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+}
+
+.chi-sono-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 20px;
+    background: #fff;
+    padding: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.chi-sono-content h2 {
+    color: #222;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.chi-sono-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.chi-sono-extra p {
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #222;
+    margin-top: 25px;
+}
+
+.chi-sono-social {
+    display: flex;
+    gap: 18px;
+}
+
+.chi-sono-social a i {
+    font-size: 2rem;
+    color: #3ed598;
+    transition: all 0.3s ease;
+}
+.chi-sono-social a:hover i {
+    color: #1d4eda;
+}
+
+.chi-sono-content-vertical {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+header .left .content .header-actions {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 0;
+    margin-top: 1px;
+    margin-left: 0;
+}
+
+header .left .content .buy-now {
+    background-color: #8ff57a;
+    color: #fff;
+    padding: 20px 32px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+header .left .content .buy-now:hover {
+    background-color: #6ee36b;
+}
+
+.login-btn {
+    background: #fff;
+    color: #222;
+    border: 2px solid #8ff57a;
+    border-radius: 12px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    margin-right: 8px;
+}
+.login-btn i {
+    font-size: 1.3rem;
+}
+.login-btn:hover {
+    background: #8ff57a;
+    color: #fff;
+    border-color: #6ee36b;
+}
+
+/* Contact form */
+.contact-strip {
+    width: 100%;
+    background: #8ff57a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+    margin: 60px 0 0 0;
+    position: relative;
+    left: unset;
+    right: unset;
+    transform: none;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 600px;      
+    padding: 40px 36px;    
+}
+
+.contact-strip h2 {
+    color: #222;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-subtitle {
+    color: #222;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: -8px;
+}
+
+#contact-form {
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 16px;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+   
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+.form-group label {
+    font-weight: 500;
+    color: #222;
+}
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    font-size: 1rem;
+    resize: none;
+}
+.send-btn {
+    background-color: #8ff57a;
+    color: #fff;
+    padding: 14px 0;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+    width: 100%; 
+    display: block;
+}
+.send-btn:hover {
+    background: #6ee36b;
+}
+#form-message {
+    margin-top: 16px;
+    font-size: 1rem;
+    color: #1d4eda;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.8s;
+}
+#form-message.fade-out {
+    opacity: 0;
+}
+
+/* Login & Register Page */
+.login-strip {
+    width: 100vw;
+    background: #8ff57a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+    min-height: 100vh;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 400px;
+}
+.login-strip h2 {
+    color: #222;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+#login-form, #register-form {
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    width: 100%;
+}
+#login-message {
+    margin-top: 16px;
+    font-size: 1rem;
+    color: #1d4eda;
+    text-align: center;
+}
+.register-link {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 1rem;
+}
+.register-link a {
+    color: #1d4eda;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.register-link a:hover {
+    color: #222;
+}
+
+#register-form .send-btn {
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+#register-form .send-btn:hover {
+    background: #6ee36b;
+    color: #000;
+}
+
+.login-logo {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.login-logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+/* Menu a tendina icona profilo*/
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background: #fff;
+    min-width: 170px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-radius: 12px;
+    z-index: 100;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    color: #222;
+    padding: 10px 22px;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #f2f2f2;
+    color: #3ed598;
+}
+
+.profile-dropdown.open .dropdown-menu {
+    display: block;
+}
+
+/* Stile pagine menù  tendina*/
+.profile-card, .settings-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    padding: 32px 24px;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.profile-card h2, .settings-card h2 {
+    color: #3ed598;
+    font-size: 2.1rem;
+    margin-bottom: 18px;
+    text-align: left;
+    width: 100%;
+}
+
+.profile-info, .settings-info {
+    width: 100%;
+}
+
+.profile-info label, .settings-info label {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.profile-info span, .settings-info input {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* Migliora i bottoni nella pagina profilo */
+.profile-card .send-btn {
+    width: 100%;
+    padding: 12px 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+}
+
+#delete-account-btn {
+    background: #e74c3c;
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+#delete-account-btn:hover {
+    background: #c0392b;
+    color: #fff;
+}
+
+/* Toggle password*/
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 34px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
+    user-select: none;
+    z-index: 2;
+}
+.toggle-password:hover {
+    color: #3ed598;
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+    background: #222;
+    color: #fff;
+    padding: 24px 0 18px 0;
+    text-align: center;
+    position: relative;
+    font-size: 1rem;
+    margin-top: 40px;
+    left: unset;
+    right: unset;
+    transform: none;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #8ff57a;
+    margin-left: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+.footer-content a{
+    color:#6ee36b;
+    text-decoration: none;
+}
+
+
+
+/* Pagina shop*/
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.site-footer {
+    flex-shrink: 0;
+}
+
+
+
+/* Contatta dev stile */
+
+
+/* --- CSS per contatta-dev.html --- */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+}
+
+.contact-content h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.contact-strip {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.contact-content {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    padding: 32px 28px;
+    max-width: 600px;      /* aumentato da 420px */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+input, textarea,
+.form-group input,
+.form-group textarea {
+    border: 1.5px solid #111;   /* bordo nero più visibile */
+    width: 100%;                /* occupa tutta la larghezza disponibile */
+    font-size: 1.08rem;         /* leggermente più grande */
+    padding: 14px;              /* padding aumentato */
+    box-sizing: border-box;
+}
+
+.send-btn {
+    background-color: #8ff57a;
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+.send-btn:hover {
+    background-color: #6ee36b;
+}
+
+.site-footer {
+    margin-top: auto;
+    background: #222;
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+}
+.site-footer a {
+    color: #8ff57a;
+    text-decoration: underline;
+}
+#dev-contact-form .form-group input,
+#dev-contact-form .form-group textarea {
+    width: 99%;
+    max-width: 760px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* ===================== MEDIA QUERIES IN FONDO ===================== */
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 8px;
+    }
+    .logo {
+        justify-content: center;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+    .navbar-actions {
+        gap: 16px;
+        height: auto;
+        margin-top: 10px;
+    }
+    .header-img {
+        max-width: 600px;  /* resta grande ma NON si stira */
+        width: auto;       /* NON usare width: 100% */
+        margin: 0 auto;
+        display: block;
+    }
+    header .left {
+        margin-left: 10px;
+        margin-right: 10px;
+        max-width: 100%;
+        padding: 18px 10px;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        min-height: unset;
+        margin-bottom: 60px;
+    }
+    header .right {
+        padding-top: 20px;
+        padding-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+    .chi-sono-strip,
+    .contact-strip {
+        padding: 30px 0 30px 0;
+    }
+    .chi-sono-content h2,
+    .contact-strip h2 {
+        font-size: 2rem;
+    }
+    .chi-sono-img {
+        width: 80px;
+        height: 80px;
+    }
+    .contact-content {
+        max-width: 95vw;
+        padding: 0 2vw;
+    }
+    #contact-form {
+        padding: 18px 6px;
+    }
+}
+
+@media (max-width: 800px) {
+    .chi-sono-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .chi-sono-img {
+        width: 80px;
+        height: 80px;
+    }
+    .chi-sono-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-links {
+        display: none !important;
+    }
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        margin-bottom: 0;
+    }
+    .navbar-actions {
+        margin-top: 0;
+        gap: 8px;
+    }
+    .login-btn {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+        margin-right: 2px;
+    }
+    .buy-now {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    header .left {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 4px;
+        max-width: 98vw;
+        height: auto;
+    }
+    .chi-sono-strip,
+    .contact-strip {
+        padding: 18px 0 18px 0;
+    }
+    header .left .content h1 {
+        font-size: 4rem;
+        margin-bottom: 2px;
+        text-align: center;
+        width: 100%;
+    }
+    header .left .content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+        text-align: center;
+        width: 100%;
+        margin-top: 100px;
+    }
+    header .left .content p {
+        margin-top: 2px;
+        font-size: 1rem;
+        margin-left: 15px;
+        margin-bottom: 20px;
+        word-break: break-word;
+        white-space: normal;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .chi-sono-strip,
+    .contact-strip,
+    .site-footer {
+        width: 100%;
+        left: unset;
+        right: unset;
+        transform: none;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 8px;
+    }
+    .footer-links a {
+        margin-left: 10px;
+        font-size: 0.98rem;
+    }
+    .site-footer {
+        font-size: 0.98rem;
+        padding: 18px 0 12px 0;
+        width: 100%;
+        left: unset;
+        right: unset;
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-card, .settings-card {
+        padding: 18px 8px;
+        max-width: 98vw;
+    }
+    .profile-card h2, .settings-card h2 {
+        font-size: 1.4rem;
+    }
+    header .left .content h1 {
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    .chi-sono-content h2,
+    .contact-strip h2 {
+        font-size: 1.2rem;
+    }
+    .chi-sono-img {
+        width: 56px;
+        height: 56px;
+    }
+    .contact-content {
+        gap: 10px;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+    }
+    .login-logo {
+        top: 10px;
+        left: 10px;
+    }
+    .login-logo img {
+        height: 36px;
+    }
+    .login-strip, .register-strip, .login-content {
+        padding-top: 60px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    header .left .content h1 {
+        font-size: 4.2rem;
+        margin-left: -8px;
+        text-align: center;
+        word-break: break-word;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+    html, body {
+        font-size: 15px;
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 6px 2vw;
+        height: auto;
+    }
+    .navbar-actions {
+        margin-top: 18px;
+        gap: 18px;
+    }
+    .logo {
+        width: 140px;
+        height: 52px;
+        margin-bottom: 18px;
+        padding-left: 0;
+    }
+    .logo img {
+        height: 52px;
+        width: 100%;
+        object-fit: contain;
+    }
+    header h1 {
+        font-size: 1.5rem;
+        margin-left: 1px;
+    }
+    .profile-card, .settings-card {
+        max-width: 98vw;
+        min-width: 0;
+        padding: 18px 4vw;
+        font-size: 1.08rem;
+    }
+    .profile-card h2, .settings-card h2 {
+        font-size: 1.1rem;
+    }
+    .profile-info label, .settings-info label {
+        font-size: 1rem;
+    }
+    .profile-info span, .settings-info input {
+        font-size: 0.98rem;
+    }
+    .send-btn, #delete-account-btn {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 6px;
+        padding: 0 4px;
+    }
+    .footer-links a {
+        font-size: 0.95rem;
+        margin-left: 6px;
+    }
+    .login-content {
+        padding: 14px 4vw;
+        max-width: 98vw;
+    }
+}
+
+/* Problema header p mobile */
+@media (max-width: 700px) {
+    header .left {
+        max-width: 98vw;
+        height: auto;
+        padding: 10px 4vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    header .left .content p {
+        font-size: 0.98rem;
+        word-break: break-word;
+        white-space: normal;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Stile card registrati */
+@media (max-width: 500px) and (min-width: 300px) {
+    .login-content {
+        padding: 14px 4vw;
+        max-width: 98vw;
+    }
+}
+
+#register-form {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 1px solid #e0e0e0;
+    padding: 32px 24px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    width: 100%;
+}
+@media (max-width: 500px) {
+    header .left .content h1 {
+        font-size: 4.2rem;
+        margin-left: -8px;
+        text-align: center;
+        word-break: break-word;
+        width: 100%;
+    }
+    .chi-sono-extra p {
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+    .logo {
+        width: 140px;
+        height: 52px;
+        margin-bottom: 18px;
+        padding-left: 0;
+    }
+    .logo img {
+        height: 52px;
+        width: 100%;
+        object-fit: contain;
+    }
+    .login-content {
+        padding: 14px 4vw;
+        max-width: 98vw;
+    }
+    .profile-card, .settings-card {
+        max-width: 98vw;
+        min-width: 0;
+        padding: 18px 4vw;
+        font-size: 1.08rem;
+    }
+    .profile-card h2, .settings-card h2 {
+        font-size: 1.1rem;
+    }
+    .profile-info label, .settings-info label {
+        font-size: 1rem;
+    }
+    .profile-info span, .settings-info input {
+        font-size: 0.98rem;
+    }
+    .send-btn, #delete-account-btn {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 6px;
+        padding: 0 4px;
+    }
+    .footer-links a {
+        font-size: 0.95rem;
+        margin-left: 6px;
+    }
+}
+
+
+@media (min-width: 1441px) {
+    .navbar {
+        max-width: 1800px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    header {
+        max-width: 1800px;
+        margin: 0 auto 140px auto;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    header .right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-left: 200px;
+        padding-right: 100px; /* aumenta ancora per spostare l'immagine più a destra */
+        padding-bottom: 80px;
+        padding-top: 60px;
+    }
+
+    .header-img {
+        max-width: 900px;
+        max-height: 700px;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: 0;
+        display: block;
+        align-self: flex-start;
+        margin-bottom: 80px;
+    }
+        header {
+        min-height: 750px; /* aumenta l'altezza minima del contenitore header */
+    }
+    header .left {
+        height: 700px;     /* aumenta l'altezza della card */
+        max-width: 900px;  /* opzionale: puoi aumentare anche la larghezza */
+    }
+    
+}
+
+
+
+/* ===================== MODULI CONTATTO UNIFORMI ===================== */
+
+/* Stile base per tutti i moduli di contatto */
+.contact-content {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    padding: 32px 28px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.contact-content h2 {
+    text-align: center;
+    width: 100%;
+    color: #222;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-subtitle {
+    color: #222;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: -8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #222;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 14px;
+    border-radius: 8px;
+    border: 1.5px solid #111;
+    font-size: 1.08rem;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    margin: 0;
+    display: block;
+    background: #fafafa;
+}
+
+/* Bottone invia uniforme */
+.send-btn {
+    background-color: #8ff57a;
+    color: #fff;
+    padding: 14px 0;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+}
+.send-btn:hover {
+    background: #6ee36b;
+}
+
+/* Messaggio di conferma */
+#form-message,
+#dev-form-message {
+    margin-top: 16px;
+    font-size: 1rem;
+    color: #1d4eda;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.8s;
+}
+#form-message.fade-out,
+#dev-form-message.fade-out {
+    opacity: 0;
+}
+
+
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+    .contact-content {
+        max-width: 95vw;
+        padding: 0 2vw;
+    }
+    #dev-contact-form .form-group input,
+    #dev-contact-form .form-group textarea {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-content {
+        gap: 10px;
+        padding: 10px 2vw;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+    }
+    #dev-contact-form .form-group input,
+    #dev-contact-form .form-group textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+
+
+
+@media (max-width: 800px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .right {
+        order: 2; /* va sotto */
+        width: 100%;
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+    }
+    .left {
+        order: 1;
+        width: 100%;
+    }
+    .header-img {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+}
